@@ -1,19 +1,20 @@
 import "./App.css";
-import Header from "./Components/Header";
 import CardDetails from "./Components/CardDetails";
-import Cards from "./Components/Cards";
-import Cart from "./Components/Cart";
+import CardContainer from "./Containers/CardContainer";
+import CartContainer from "./Containers/CartContainer";
 import { BrowserRouter as Router, Routes, Route } from "react-router-dom";
+import HeaderContainer from "./Containers/HeaderContainer";
 
 function App() {
   return (
     <div>
       <Router>
-        <Header />
+        {/* <Header /> */}
+        <HeaderContainer/>
         <Routes>
-          <Route path="/" element={<Cards />} />
+          <Route path="/" element={<CardContainer />} />
           <Route path="/cardDetails" element={<CardDetails />} />
-          <Route path="/cart" element={<Cart />} />
+          <Route path="/cart" element={<CartContainer />} />
         </Routes>
       </Router>
     </div>

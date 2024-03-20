@@ -1,7 +1,13 @@
 import react from "react";
 import { Link } from "react-router-dom";
+// import { useSelector } from "react-redux";
 
-export default function Header() {
+export default function Header(props) {
+  console.log("props", props);
+
+  // const getData = useSelector((state) => state.cardItems);
+  // console.log(getData);
+
   return (
     <div className="container-fluid">
       <nav className="navbar navbar-expand-lg bg-body-tertiary">
@@ -20,6 +26,7 @@ export default function Header() {
           >
             <span className="navbar-toggler-icon"></span>
           </button>
+          
           <div className="collapse navbar-collapse" id="navbarNavDropdown">
             <ul className="navbar-nav">
               <li className="nav-item">
@@ -29,13 +36,15 @@ export default function Header() {
               </li>
             </ul>
           </div>
-          <button type="button" class="btn  position-relative">
+
+          <Link to="/cart" type="button" className="btn  position-relative">
             <i className="fa-solid fa-cart-shopping cart"></i>
-            <span class="position-absolute top-10 start-90 translate-middle badge rounded-pill bg-danger">
-              1
-              <span class="visually-hidden">unread messages</span>
+            <span className="position-absolute top-10 start-90 translate-middle badge rounded-pill bg-danger">
+              {props.data.length}
+              <span className="visually-hidden">unread messages</span>
             </span>
-          </button>
+          </Link>
+
         </div>
       </nav>
     </div>
