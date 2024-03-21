@@ -1,5 +1,5 @@
 import "./App.css";
-import CardDetails from "./Components/CardDetails";
+import CardDetailsContainer from "./Containers/CardDetailsContainer";
 import CardContainer from "./Containers/CardContainer";
 import CartContainer from "./Containers/CartContainer";
 import { BrowserRouter as Router, Routes, Route } from "react-router-dom";
@@ -13,7 +13,7 @@ function App() {
         <HeaderContainer/>
         <Routes>
           <Route path="/" element={<CardContainer />} />
-          <Route path="/cardDetails" element={<CardDetails />} />
+          <Route path="/cardDetails/:id" element={<CardDetailsContainer />} />
           <Route path="/cart" element={<CartContainer />} />
         </Routes>
       </Router>

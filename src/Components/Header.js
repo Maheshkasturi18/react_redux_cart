@@ -3,7 +3,7 @@ import { Link } from "react-router-dom";
 // import { useSelector } from "react-redux";
 
 export default function Header(props) {
-  console.log("props", props);
+  // console.log("props", props);
 
   // const getData = useSelector((state) => state.cardItems);
   // console.log(getData);
