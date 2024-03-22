@@ -5,3 +5,10 @@ export const addToCart = (data) => {
       data: data,
     };
   };
+
+  export const removeToCart = () => {
+    //   console.log("action",data)
+    return {
+      type: "REMOVE_TO_CART",
+    };
+  };

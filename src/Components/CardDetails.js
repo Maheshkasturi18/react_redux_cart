@@ -72,13 +72,7 @@ export default function CardDetails(props) {
                       {ele.cardData.element.somedata}
                       
                     </p>
-                    <p>
-                      <b>Remove:</b>
-                      <i
-                        className="fa-solid fa-trash"
-                        style={{ color: "red", padding: "5px" }}
-                      ></i>
-                    </p>
+                    
                   </div>
                 </div>
               </>
