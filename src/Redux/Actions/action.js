@@ -1,14 +1,26 @@
-export const addToCart = (data) => {
-    //   console.warn("action",data)
-    return {
-      type: "ADD_TO_CART",
-      data: data,
-    };
-  };
+export const ADD = (item) => {
+  return {
+      type: "ADD_CART",
+      payload: item
+  }
+}
 
-  export const removeToCart = () => {
-    //   console.log("action",data)
-    return {
-      type: "REMOVE_TO_CART",
-    };
-  };
+// remove iteams
+export const DLT = (id) => {
+  return {
+      type: "RMV_CART",
+      payload: id
+  }
+}
+
+// remove individual iteam
+
+export const REMOVE = (iteam) => {
+  return {
+      type: "RMV_ONE",
+      payload: iteam
+  }
+}
+
+
+  

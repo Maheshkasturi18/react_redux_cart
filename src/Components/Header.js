@@ -1,16 +1,15 @@
 import react from "react";
 import { Link } from "react-router-dom";
-// import { useSelector } from "react-redux";
+import {  useSelector } from 'react-redux'
 
-export default function Header(props) {
-  // console.log("props", props);
+export default function Header() {
 
-  // const getData = useSelector((state) => state.cardItems);
-  // console.log(getData);
+  const getdata = useSelector((state) => state.cartreducer.carts);
+  // console.log(getdata);
 
   return (
-    <div className="container-fluid">
-      <nav className="navbar navbar-expand-lg bg-body-tertiary">
+    <div className="container-fluid sticky-top">
+      <nav className="navbar navbar-expand-lg bg-body-tertiary ">
         <div className="container">
           <Link className="navbar-brand" to="/">
             Add to Cart
@@ -26,7 +25,7 @@ export default function Header(props) {
           >
             <span className="navbar-toggler-icon"></span>
           </button>
-          
+
           <div className="collapse navbar-collapse" id="navbarNavDropdown">
             <ul className="navbar-nav">
               <li className="nav-item">
@@ -40,11 +39,10 @@ export default function Header(props) {
           <Link to="/cart" type="button" className="btn  position-relative">
             <i className="fa-solid fa-cart-shopping cart"></i>
             <span className="position-absolute top-10 start-90 translate-middle badge rounded-pill bg-danger">
-              {props.data.length}
+              {getdata.length}
               <span className="visually-hidden">unread messages</span>
             </span>
           </Link>
-
         </div>
       </nav>
     </div>
